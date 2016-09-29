@@ -2,6 +2,6 @@
 Lab for team development
 Made by 
   Andrey Melnik
-  Viktoria Gutsalyk
+  Viktoria Gutsalyk)))
   Valentin Rikun
   Bogdan Yavorsky
