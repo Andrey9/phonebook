@@ -1,7 +1,26 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Holden
- * Date: 20.10.2016
- * Time: 20:35
- */
+@extends('hab.main')
+@section('content')
+    <div class="container">
+        {!! Form::model($record,['method'=>'PATCH','url'=>'/record/'.$record->id]) !!}
+        @include('hab.form')
+
+        {!! Form::close() !!}
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@stop

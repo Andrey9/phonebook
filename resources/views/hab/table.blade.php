@@ -3,49 +3,43 @@
 <div class="container">
     <div class="panel panel-default">
         <!-- Default panel contents -->
-        <div class="panel-heading">Panel heading</div>
+        <div class="panel-heading">Список номерів</div>
 
         <!-- Table -->
         <table class="table">
-            <tr>
-                <td>name</td>
-                <td>surname</td>
-                <td>nomer</td>
-                <td>year</td>
+            <th>
+                <td>Ім'я</td>
+                <td>Прізвище</td>
+                <td>Ромер</td>
+                <td>Дата народження</td>
                 <td>
-                    <a href="" class="btn btn-default pull-right">
-                        <span class="glyphicon glyphicon-remove"></span></a>
+                    Керування
+                </td>
+            </th>
+            @if(!$records)
+                <td colspan="5">Немає записів</td>
+            @else
 
-                    <a href="" class="btn btn-default pull-right">
+            @foreach($records as $record)
+
+            <tr>
+                <td>{{$record->name}}</td>
+                <td>{{$record->surname}}</td>
+                <td>{{$record->number}}</td>
+                <td>{{$record->year}}</td>
+                <td>
+                    {!! Form::open(['method' => 'DELETE', 'url' => '/record/'.$record->id]) !!}
+                    {!! Form::button('<span class="glyphicon glyphicon-remove"></span>',['class' => 'button','type'=>'submit']) !!}
+                    {!! Form::close() !!}
+
+                    <a href="{{url('/record/'.$record->id.'/edit')}}" class="btn btn-default pull-right">
                         <span class="glyphicon glyphicon-edit"></span></a>
                 </td>
             </tr>
-            <tr>
-                <td>name</td>
-                <td>surname</td>
-                <td>nomer</td>
-                <td>year</td>
-                <td>
-                    <a href="" class="btn btn-default pull-right">
-                        <span class="glyphicon glyphicon-remove"></span></a>
+            @endforeach
 
-                    <a href="" class="btn btn-default pull-right">
-                        <span class="glyphicon glyphicon-edit"></span></a>
-                </td>
-            </tr>
-            <tr>
-                <td>name</td>
-                <td>surname</td>
-                <td>nomer</td>
-                <td>year</td>
-                <td>
-                    <a href="" class="btn btn-default pull-right">
-                        <span class="glyphicon glyphicon-remove"></span></a>
+                @endif
 
-                    <a href="" class="btn btn-default pull-right">
-                        <span class="glyphicon glyphicon-edit"></span></a>
-                </td>
-            </tr>
         </table>
     </div>
 </div>
