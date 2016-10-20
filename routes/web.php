@@ -10,13 +10,7 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/',function(){
+    return redirect('/record');
 });
-route::get('/main',function(){
-    return view('hab.table');
-});
-route::get('/add',function(){
-    return view('hab.add');
-});
+Route::resource('/record','RecordController');
