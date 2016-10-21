@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+route::get('/main',function(){
+    return view('hab.table');
+});
+route::get('/add',function(){
+    return view('hab.add');
+});
