@@ -13,17 +13,4 @@
 
 </div>
 
-<div class="form-group">
-    {!! Form::input('date','year',$record->year->format('Y-m-d'),['class'=>'form-control']) !!}
 
-</div>
-
-<div class="form-group">
-    {!! Form::submit('save',['class'=>'form-control btn btn-success']) !!}
-
-</div>
-@if ($errors->any())
-    @foreach($errors as $error)
-{{$error}}
-        @endforeach
-    @endif

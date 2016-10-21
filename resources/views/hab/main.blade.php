@@ -14,7 +14,7 @@
 <nav class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <span class="glyphicon glyphicon-phone-alt"></span>
             </a>
             <ul class="nav navbar-nav navbar-right">
