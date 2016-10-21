@@ -29,9 +29,8 @@ class RecordController extends Controller
         return view('hab.edit')->with(['record'=>$record]);
     }
 
-    public function update(RecordRequest $request){
-        $record=new Record($request->all());
-        $record->update();
+    public function update(Record $record, RecordRequest $request){
+        $record->update($request->all());
         return redirect('/');
     }
 
