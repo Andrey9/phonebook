@@ -28,7 +28,7 @@ class RecordsSeeder extends Seeder
                 'name' => 'Name '.$i,
                 'surname' => 'Surname '.$i,
                 'number' => $i.$i.'-'.$i.$i.'-'.$i.$i,
-                'year' => Carbon::createFromFormat('d-m-Y','2'.$i.'-0'.$i.'-199'.$i),
+                'year' => '199'.$i.'-0'.$i.'-2'.$i,
             ]);
     }
 }
