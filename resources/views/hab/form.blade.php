@@ -9,12 +9,12 @@
 </div>
 
 <div class="form-group">
-    {!! Form::text('nomer',null,['class'=>'form-control']) !!}
+    {!! Form::text('number',null,['class'=>'form-control']) !!}
 
 </div>
 
 <div class="form-group">
-    {!! Form::text('date','year',null,['class'=>'form-control']) !!}
+    {!! Form::input('date','year',$record->year->format('Y-m-d'),['class'=>'form-control']) !!}
 
 </div>
 
@@ -22,3 +22,8 @@
     {!! Form::submit('save',['class'=>'form-control btn btn-success']) !!}
 
 </div>
+@if ($errors->any())
+    @foreach($errors as $error)
+{{$error}}
+        @endforeach
+    @endif
