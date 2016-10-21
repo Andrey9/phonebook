@@ -18,7 +18,7 @@ class CreateRecordsTable extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('number');
-            $table->timestamp('year');
+            $table->date('year');
             $table->timestamps();
         });
     }

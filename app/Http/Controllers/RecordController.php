@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Record;
+use App\Http\Requests\RecordRequest;
 class RecordController extends Controller
 {
     public function index(){
