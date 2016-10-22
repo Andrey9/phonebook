@@ -18,7 +18,7 @@
                 <span class="glyphicon glyphicon-phone-alt"></span>
             </a>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{url('/record/create')}}">Додати новий запис</a></li>
+                <li><a href="{{url('/record/create')}}" id="addLink">Додати новий запис</a></li>
                 </ul>
         </div>
     </div>
